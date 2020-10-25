@@ -197,11 +197,10 @@
 
     // ButtonCがクリックされた時の処理
     function btnCClick(e){
-        alarm();
         active = false;
         period = 60* parseInt($("#minute").val()) + parseInt($("#second").val());
-        $("#time").html("経過時間：0");
-        $("#remain").html("残り時間：" + period);
+        $("#time").html("経過時間：0秒");
+        $("#remain").html("残り時間：" + period + "秒");
         
     }
     
@@ -212,8 +211,8 @@
       if(active){
         var time = parseInt((new Date() - startTime)/1000 );
         var rest = period - time;
-        $("#time").html("経過時間：" + time);
-        $("#remain").html("残り時間：" + rest);
+        $("#time").html("経過時間：" + time + "秒");
+        $("#remain").html("残り時間：" + rest + "秒");
         analog(rest);
       }
       if(rest <= 0){
@@ -237,6 +236,8 @@
     <button id="btnB">ストップ</button>  
     <button id="btnC">ButtonC</button>  
     <input type="number" id="minute" value=3 >
+    <div id="minute2">分</div>
     <input type="number" id="second" value=0 >
+    <div id="second2">秒</div>
 </body>
 </html>
