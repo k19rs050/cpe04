@@ -86,7 +86,12 @@
        font-size: 30px;
        position:absolute; top:450px; left:285px;
     }
-    
+
+   #setumei {
+       color:black;
+       font-size: 30px;
+       position: absolute; top:500px; left:90px;
+   } 
     input[type=number] {text-align: right;}
 
     body {
